@@ -31,7 +31,7 @@ const Register = () => {
     };
 
     try {
-      await axios.post('http://localhost:5000/api/register', payload);
+      await axios.post('http://localhost:5000/api/auth/register', payload);
       alert('Registration successful!');
       window.location.href = '/login';
     } catch (err) {

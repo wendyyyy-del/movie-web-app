@@ -1,0 +1,14 @@
+# Backend (Flask/Python)
+backend/venv/
+*.pyc
+__pycache__/
+*.sqlite3
+.env
+
+# Frontend (React/Node)
+frontend/node_modules/
+build/
+dist/
+
+# macOS system files
+.DS_Store

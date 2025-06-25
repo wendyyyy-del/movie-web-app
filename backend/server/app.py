@@ -15,7 +15,8 @@ def create_app():
     db.init_app(app)
     jwt.init_app(app)
     Migrate(app, db)
-    CORS(app)
+    
+    CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}}, supports_credentials=True)
 
     @app.route('/')
     def index():
@@ -25,8 +26,8 @@ def create_app():
     from .routes.movie_routes import movie_bp
     from .routes.review_routes import review_bp
 
-    app.register_blueprint(review_bp, url_prefix='/api/movies')
     app.register_blueprint(auth_bp, url_prefix='/api/auth')
     app.register_blueprint(movie_bp, url_prefix='/api/movies')
+    app.register_blueprint(review_bp, url_prefix='/api/movies')
 
-    return app
+    return app  
