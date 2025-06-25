@@ -1,0 +1,409 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+}
+
+
+.login-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.login-box label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+}
+
+.login-box input::placeholder {
+  color: #aaa;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #e50914;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background-color: #f6121d;
+}
+
+.login-footer {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-footer a {
+  color: #e50914;
+  text-decoration: none;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('https://img.freepik.com/premium-photo/have-good-evening-watching-movie-laptop-with-popcorn_253401-3169.jpg?semt=ais_items_boosted&w=740') no-repeat center center;
+  background-size: cover;
+  backdrop-filter: blur(2px);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background: url("https://img.freepik.com/free-vector/abstract-blue-light-pipe-speed-zoom-black-background-technology_1142-9980.jpg?semt=ais_hybrid&w=740");
+    color: #1AE6DB;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #07F0C9;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  }
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+.navbar {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 20px;
+  background-color: #0d0d0d;
+  color: #00ffff;
+  gap: 50px; 
+}
+
+.navbar-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.navbar-links a:hover {
+  color: #e50914; /* Netflix red on hover */
+}
+  #search-input {
+    width: 280px;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 30px 0 0 30px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  #search-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #07F0C9;
+    color: #000;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  #search-btn:hover {
+    background-color: #05c3a7;
+  }
+  
+  .category-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  
+  .category-buttons button {
+    padding: 0.6rem 1.2rem;
+    background-color: #4CFF3C;
+    color: #000;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .category-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  }
+  
+  .back-btn {
+    align-self: flex-start;
+    margin: 1rem 2rem;
+    color: #23F108;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .back-btn:hover {
+    color: #1aaa08;
+  }
+  
+  #movie-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  .movie-card {
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  }
+  
+  .movie-card img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+  }
+  
+  .movie-details {
+    padding: 1rem;
+    color: #fff;
+  }
+  
+  .movie-details h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .movie-details p {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .movie-details .description {
+    max-height: 4.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    #search-input {
+      width: 200px;
+    }
+  
+    .movie-details h2 {
+      font-size: 1rem;
+    }
+  
+  }
+
+  .login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('https://img.freepik.com/premium-photo/have-good-evening-watching-movie-laptop-with-popcorn_253401-3169.jpg?semt=ais_items_boosted&w=740') no-repeat center center;
+  background-size: cover;
+  backdrop-filter: blur(2px);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.login-title {
+  font-size: 28px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.login-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.login-input {
+  width: 200%;
+  height:50px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #222;
+  color: white;
+  font-size: 14px;
+}
+
+.login-input::placeholder {
+  color: #aaa;
+}
+
+.register-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #e50914;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.register-button:hover {
+  background-color: #f6121d;
+}
+
+.login-footer-text {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-link {
+  color: #e50914;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.login-form label input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  padding: 15px 30px;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+.navbar-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.navbar-links {
+  display: flex;
+  gap: 15px;
+}
+
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  background-color: #e50914;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-links a:hover {
+  background-color: white;
+  transform: scale(1.05);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  font-size: 80px; 
+  vertical-align: middle;
+  margin-right: 8px; 
+}
+
+.navbar-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

@@ -1,0 +1,109 @@
+Single-database configuration for Flask.
+# 🎬 Fullstack Movie Web App — Backend (Flask API)
+
+This is the **Flask RESTful API** for our fullstack movie review website. It handles user authentication, movie data, and user-submitted reviews.
+
+---
+
+## Features
+
+-  User registration & JWT-based login
+-  Protected profile route
+-  CRUD operations for movies & reviews
+-  Authenticated review creation & deletion
+-  SQLite or PostgreSQL support
+-  CORS-enabled for frontend integration
+
+---
+
+## Tech Stack
+
+- Python 3.12+
+- Flask
+- Flask SQLAlchemy
+- Flask JWT Extended
+- Flask Migrate
+- SQLite (or PostgreSQL)
+- Flask CORS
+
+---
+
+## Project Structure
+
+.
+├── server/
+│ ├── app.py # Flask app factory
+│ ├── models.py # SQLAlchemy models
+│ ├── routes/ # Blueprint routes
+│ └── init.py
+├── migrations/ # Flask-Migrate files
+├── seed.py # DB seeding script
+├── wsgi.py # App entry point
+├── requirements.txt
+├── Pipfile / Pipfile.lock
+└── README.md
+
+yaml
+Copy
+Edit
+
+---
+
+##  Setup Instructions
+
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/YOUR-USERNAME/fullstack-movie-web-backend.git
+cd fullstack-movie-web-backend
+2. Set Up Virtual Environment
+bash
+Copy
+Edit
+pipenv install
+3. Run Migrations
+bash
+Copy
+Edit
+pipenv run flask db init        
+pipenv run flask db migrate -m "initial"
+pipenv run flask db upgrade
+4. Seed the Database
+bash
+Copy
+Edit
+PYTHONPATH=. pipenv run python seed.py
+5. Start the Server
+bash
+Copy
+Edit
+export FLASK_APP=wsgi.py
+pipenv run flask run
+ API Endpoints
+Auth
+Method	Endpoint	Description
+POST	/api/auth/register	Register new user
+POST	/api/auth/login	Login and get token
+
+User
+Method	Endpoint	Description
+GET	/api/profile	Get logged-in user info
+PUT	/api/profile	Update user profile
+
+Movies
+Method	Endpoint	Description
+GET	/api/movies	List all movies
+POST	/api/movies	Add a new movie
+
+Reviews
+Method	Endpoint	Description
+GET	/api/movies/<id>/reviews	Get reviews for a movie
+POST	/api/movies/<id>/reviews	Add a review (auth only)
+DELETE	/api/reviews/<id>	Delete a review (auth)
+
+Team
+George – Backend 
+
+Wendy – Backend Lead & Structure
+
+Others – Frontend Team (React)
