@@ -26,6 +26,17 @@ class Movie(db.Model):
     genre = db.Column(db.String(50))
     poster_url = db.Column(db.String(255))
 
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "title": self.title,
+            "description": self.description,
+            "year": self.year,
+            "genre": self.genre,
+            "poster_url": self.poster_url
+        }
+
+
 class Review(db.Model):
     __tablename__ = 'reviews'
 
