@@ -3,10 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Navbar from './components/Navbar';
 import Login from './components/Login';
 import Register from './components/Register';
-import Dashboard from './components/Dashboard';
-// Removed Home if unused
 import MovieDetail from './components/MovieDetail';
-
 
 const App = () => {
   const token = localStorage.getItem('token');
@@ -18,7 +15,6 @@ const App = () => {
         <Route path="/" element={<Navigate to="/login" />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={token ? <Dashboard /> : <Navigate to="/login" />} />
         <Route path="/movies/:id" element={<MovieDetail />} />
       </Routes>
     </Router>

@@ -19,23 +19,24 @@ const Register = () => {
 
   const handleRegister = async () => {
     if (form.password !== form.confirmPassword) {
-      alert('Passwords do not match.');
+      alert('❌ Passwords do not match.');
       return;
     }
 
     const payload = {
       username: form.username,
       email: form.email,
-      age: form.age,
+      age: form.age,  // Make sure your Flask User model includes `age`
       password: form.password,
     };
 
     try {
       await axios.post('http://localhost:5000/api/auth/register', payload);
-      alert('Registration successful!');
+      alert('✅ Registration successful!');
       window.location.href = '/login';
     } catch (err) {
-      alert(err.response?.data?.message || 'Registration failed');
+      console.error("❌ Registration error:", err.response);
+      alert(err.response?.data?.error || 'Registration failed');
     }
   };
 
