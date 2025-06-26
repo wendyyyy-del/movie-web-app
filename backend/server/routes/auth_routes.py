@@ -18,7 +18,7 @@ def register():
         return jsonify({'error': 'Username exists'}), 400
 
     try:
-        user = User(username=data['username'], email=data['email'])
+        user = User(username=data['username'], email=data['email'], age=data.get('age'))
         user.set_password(data['password'])
         db.session.add(user)
         db.session.commit()
